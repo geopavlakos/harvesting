@@ -49,7 +49,7 @@ for i = 1,nsamples do
 
     predHMs:copy(out)
 
-    local predFile = hdf5.open('preds/' .. set .. '_' .. i .. '.h5', 'w')
+    local predFile = hdf5.open('preds/' .. set .. '_' .. idxs[i] .. '.h5', 'w')
     predFile:write('heatmaps', predHMs)
     predFile:close()
 
